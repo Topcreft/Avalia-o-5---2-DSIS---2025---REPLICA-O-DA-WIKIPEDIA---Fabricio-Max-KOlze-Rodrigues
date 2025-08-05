@@ -1,0 +1,162 @@
+/*
+  =====================================
+  Variáveis de Cores (Custom Properties)
+  =====================================
+*/
+
+/* Tema Claro (Tons de Verde) */
+:root, .light-theme {
+    --fundo-principal: #00ad0e;    /* Verde bem claro, quase branco */
+    --fundo-secundario: #197e00;
+    --fundo-terciario: #0e6311;    /* Verde claro */
+    --texto-principal: #003303;    /* Verde escuro */
+    --texto-secundario: #064209;   /* Verde musgo */
+    --texto-titulos: #113313;      /* Verde médio */
+    --borda: #044b08;              /* Verde acinzentado */
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Escuro (Tons de Verde Escuro) */
+.dark-theme {
+    --fundo-principal: #1b5e20;    /* Verde musgo escuro */
+    --fundo-secundario: #2e7d32;   /* Verde escuro */
+    --fundo-terciario: #388e3c;    /* Verde médio */
+    --texto-principal: #009b0d;    /* Verde bem claro */
+    --texto-secundario:  #27b304;   /* Verde claro */
+    --texto-titulos: #2e7d32;      /* Verde mais claro */
+    --borda: #66bb6a;              /* Verde vibrante */
+    --sombra: rgba(0, 0, 0, 0.3);
+}
+
+/*
+  =====================================
+  Estilos Globais e da Estrutura
+  =====================================
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fundo-secundario);
+    color: var(--texto-titulos);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .conteiner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav {
+    background-color: var(--fundo-terciario);
+    padding: 1px;
+    transition: background-color 0.3s ease;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--fundo-secundario);
+    box-shadow: 0 0 5px var(--sombra);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer {
+    background-color: var(--fundo-secundario);
+    padding: 20px;
+    text-align: center;
+    color: var(--texto-titulos);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*
+  =====================================
+  Estilos de Elementos Específicos
+  =====================================
+*/
+
+h1, h2, h3 {
+    color: var(--texto-titulos);
+    text-align: center;
+}
+
+img {
+    width: 230px;
+    height: 185px;
+    border: 5px solid var(--borda);
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+a {
+    color: var(--texto-titulos);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--texto-secundario);
+    text-decoration: underline;
+    background-color: var(--fundo-terciario);
+    border-radius: 5px;
+}
+
+button {
+    color: var(--texto-principal);
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    color: var(--texto-titulos);
+    background-color: var(--fundo-principal);
+    border-color: var(--fundo-secundario);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+    margin: 0;
+}
+
+nav ul li a {
+    padding: 15px 10px;
+    border-radius: 3px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--texto-secundario);
+    background-color: var(--fundo-secundario);
+}
+
+section ul li {
+    list-style-type: circle;
+    margin: 10px;
+    color: var(--texto-titulos);
+}
